@@ -35,7 +35,7 @@ export default function Footer() {
                                 <Phone size={16} /> +216 71 000 000
                             </a>
                             <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', color: '#94a3b8' }}>
-                                <MapPin size={16} /> Tunis, Tunisie
+                                <MapPin size={16} /> Immeuble 45, Avenue du Japon, 1073 Montplaisir, Tunis
                             </div>
                         </div>
                     </div>
