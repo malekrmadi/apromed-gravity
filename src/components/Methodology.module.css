@@ -1,0 +1,74 @@
+.steps {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3rem;
+    margin-top: 4rem;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .steps {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+.step {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.stepNumber {
+    width: 70px;
+    height: 70px;
+    background: white;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+}
+
+.step:hover .stepNumber {
+    background: var(--accent);
+    color: white;
+    transform: scale(1.1);
+}
+
+.stepTitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--foreground);
+}
+
+.stepDesc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.connector {
+    position: absolute;
+    top: 35px;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--border) 50%, transparent 50%);
+    background-size: 20px 100%;
+    z-index: 0;
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .connector {
+        display: block;
+    }
+}
